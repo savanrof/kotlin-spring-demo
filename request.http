@@ -1,0 +1,46 @@
+### SOLDIER
+
+### Get all soldiers
+GET http://localhost:8080/soldiers
+
+### Get soldier by ID
+GET http://localhost:8080/soldiers/{id}
+
+### Delete soldier by ID
+DELETE http://localhost:8080/soldiers/{id}
+
+### Update soldier
+PUT http://localhost:8080/soldiers
+
+{
+	"id": "5cb443d9-24b5-4400-87de-19874a4e333d",
+    "militaryType": "OFFICER",
+    "rank": "GENERAL",
+    "salary": 999999.0
+}
+
+### Create soldier
+POST http://localhost:8080/soldiers
+
+{
+	"id": "aa5ae519-e958-4746-b34f-b072ea91356b",
+    "militaryType": "TROOPER",
+    "rank": "PRIVATE",
+    "salary": 500.0
+}
+
+### STATE
+
+### Get soldier's state by soldier's id
+GET http://localhost:8080/soldiers/{id}/state
+
+### Get list of soldier's state by state 
+GET http://localhost:8080/soldiers/state?state=
+
+### Create state of soldier
+POST http://localhost:8080/soldiers/state
+
+{
+	"soldier": "5cb443d9-24b5-4400-87de-19874a4e333d",
+    "state": "DEATH"
+}
